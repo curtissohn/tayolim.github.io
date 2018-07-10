@@ -1,211 +1,165 @@
 /* natural box model */
+
 html {
-    box-sizing: border-box;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
+  box-sizing: border-box;
 }
 
-/*
-    UTILITIES
-*/
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Browser Upgrade Prompt */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
 
 /* hides an element, but not from screen readers */
+
 .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 /* no break */
-.nobr {
-    white-space: nowrap;
-}
 
-/* clearfix - removes floats and returns to standard 'stacking block' flow */
-.group::after {
-  content: "";
-  display: table;
-  clear: both;
+.nobr {
+  white-space: nowrap;
 }
 
 /*
     STRUCTURE
-    https://www.w3schools.com/colors/colors_names.asp
-    https://material.io/guidelines/style/color.html#color-color-palette
 */
 
-body{
-  background-color:#A3AF90;
-  /*background-image: url("../images/food.png");*/
-}
-.container{
-    width: 720px;
-    margin: 35px auto; /*centers the container*/
-    border: 1px solid #ECE2E0;
-    padding: 50px;
-    background-color:#EFF7EC;
-}
-.ingredients{
-  float:left;
-  width:35%;
-  margin-bottom:146px;
+body {
+  background-color: #0F1515;
+  /*background-image:url("../images/Sky1.jpg");*/
+  /*I wanted my background to scroll so I switched from this to img*/
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center top;
+  position: relative;
+  z-index: 0;
 }
 
-.directions{
-  float:right;
-  width:60%
-}
-.text-1{
-  padding-top:30px;
+.quote {
+  position: fixed;
+  width: 750px;
+  height: 600px;
+  top: 45px;
+  left: 25%;
+  right: 25%;
+  margin: 3% 4%;
+  /*centers the container*/
+  padding: 55px;
+  background-color: rgba(0, 0, 0, .3);
+  transform: perspective(1000px)rotateY( 25deg);
+  z-index: 1;
 }
 
-figure{
-  margin:0px;
-  padding:0px;
-}
 /*
     TYPOGRAPHY
-    https://www.thoughtco.com/web-safe-font-stacks-3467429
 */
-h1, h2, h3{
-  font-family: BrandonGrotesque,"Helvetica Neue",Helvetica,arial,sans serif;
-  line-height: 0.5em;
-  color:#292b2d;
-}
-h1{
-  margin-top:40px;
-  font-size: 70px;
-  text-transform: uppercase;
-  font-family:"Amatic SC";
-}
-h2{
-  font-size: 26px;
-  text-transform: uppercase;
 
-}
-h3{
-  padding-bottom:10px;
+.lyrics {
+  position: absolute;
+  margin: 40px 20px 20px;
+  top: 30px;
+  line-height: 1.4em;
+  color: #CFD8DC;
+  font-size: 45px;
+  font-family: "Amatic SC", "Alegreya Sans SC", "Reenie Beanie", sans-serif;
+  font-weight: 100;
+  /*transform: perspective(1000px)rotateY( 25deg );*/
 }
 
-p, td, li{
-  font-family: Helvetica,'Trebuchet MS', Arial, sans-serif;
-  font-size:12px;
-  line-height: 1.3em;
-  color:#3b3e42;
+.lyrics::before {
+  position: absolute;
+  content: open-quote;
+  top: -2px;
+  left: -14px;
+  font-size: 50px;
+  font-family: "Amatic SC", sans-serif;
+  color: #CFD8DC;
 }
-small{
-  font-family: Helvetica,'Trebuchet MS', Arial, sans-serif;
-  font-size:10px;
-  line-height:0.2em;
-  color:	#938072;
+
+.lyrics::after {
+  position: absolute;
+  content: close-quote;
+  bottom: 5px;
+  right: 120px;
+  font-size: 50px;
+  font-family: "Amatic SC", sans-serif;
+  color: #CFD8DC;
 }
-.caption{
-  font-family: Helvetica,'Trebuchet MS', Arial, sans-serif;
-  font-size:11px;
-  line-height:0.2em;
-  color:	#938072;
-  float:right;
+
+.credit {
+  position: absolute;
+  bottom: 30px;
+  right: 80px;
+  color: #CFD8DC;
+  font-size: 15px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  float: right;
 }
-figcaption{
-  font-family: Helvetica,'Trebuchet MS', Arial, sans-serif;
-  font-size:11px;
-  line-height:0.2em;
-  color:	#938072;
-  float:right;
-}
-/*
-    LISTS
-*/
-.list-2{
-  margin-left:-25px;
-}
-.list-1{
-  margin-left:-40px;
-}
-ol li{
-    padding-bottom: 12px;
-    line-height:1.5em;
-}
-ul li{
-  line-height:1.4em;
-  padding-bottom:10px;
-  padding-top:10px;
-  border-bottom: 1px dotted black;
-  border-color:#b7b3b3;
+
+.HIM {
+  color: white;
+  font-size: 60px;
+  text-shadow:-2px 0 0 #BDBDBD,
+              -3px 0.2px 0px rgba(200, 200, 200, 0.5),
+              -4px 1px 0px rgba(200, 200, 200, 0.4),
+              -5px 1px 0px rgba(200, 200, 200, 0.3),
+              -6px 1.5px 0px rgba(200, 200, 200, 0.25),
+              -7px 1.5px 0px rgba(200, 200, 200, 0.2),
+              -8px 1.5px 0px rgba(200, 200, 200, 0.15),
+              -9px 2px 0px rgba(200, 200, 200, 0.10),
+              -11px 2px 0px rgba(200, 200, 200, 0.05);
 }
 
 /*
     IMAGES
 */
-img{
-  /*forces images to pay attention to parent*/
+
+img {
+  position: relative;
   width: 100%;
-  display:block;
-  padding:10px 0px 10px 0px;
-  margin-bottom: 0px;
+  display: block;
+  opacity: .8;
+  z-index: 0;
 }
+
+/* clearfix - in case you decide to float elements */
+
+/*.group::after {
+  content: "";
+  display: table;
+  clear: both;
+}*/
+
 /*
     LINKS
 */
-a:link{
-  color:#FC831D;
-  text-decoration: none;
-  border-bottom: none;
-}
-a:visited{
-  color:#C64C25;
-}
-a:hover{
-  color:#FC831D;
-  border-bottom: 1px dotted #FC831D;
-;
-}
-a:active{
-  color:#FC831D
-;
-}
 
 /*
     TABLES
 */
-.table-1{
-  margin-left:-5px;
-  margin-bottom: 20px;
-  line-height:0.2em;
 
-
-}
-.table-1 td, .table-1 th{
-  font-family: Helvetica, sans-serif;
-  font-size:10px;
-  padding:5px 6px 0px 6px;
-
-
-}
-.table-1 th {
-  color:#2d2d2d;
-  text-align: left;
-}
-.table-1 td {
-  color:#3d3b3b;
-  text-align: center;
-  border-right-style:solid;
-  border-right-width: thin;
-  border-collapse: collapse;
-  border-color: #b7b3b3;
-
-}
 /*
-    BOXES
+    HOME
 */
 
-
 /*
-    PAGE
+    ANOTHER PAGE
 */
