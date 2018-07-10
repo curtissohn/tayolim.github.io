@@ -1,0 +1,211 @@
+/* natural box model */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*
+    UTILITIES
+*/
+
+/* hides an element, but not from screen readers */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* no break */
+.nobr {
+    white-space: nowrap;
+}
+
+/* clearfix - removes floats and returns to standard 'stacking block' flow */
+.group::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*
+    STRUCTURE
+    https://www.w3schools.com/colors/colors_names.asp
+    https://material.io/guidelines/style/color.html#color-color-palette
+*/
+
+body{
+  background-color:#A3AF90;
+  /*background-image: url("../images/food.png");*/
+}
+.container{
+    width: 720px;
+    margin: 35px auto; /*centers the container*/
+    border: 1px solid #ECE2E0;
+    padding: 50px;
+    background-color:#EFF7EC;
+}
+.ingredients{
+  float:left;
+  width:35%;
+  margin-bottom:146px;
+}
+
+.directions{
+  float:right;
+  width:60%
+}
+.text-1{
+  padding-top:30px;
+}
+
+figure{
+  margin:0px;
+  padding:0px;
+}
+/*
+    TYPOGRAPHY
+    https://www.thoughtco.com/web-safe-font-stacks-3467429
+*/
+h1, h2, h3{
+  font-family: BrandonGrotesque,"Helvetica Neue",Helvetica,arial,sans serif;
+  line-height: 0.5em;
+  color:#292b2d;
+}
+h1{
+  margin-top:40px;
+  font-size: 70px;
+  text-transform: uppercase;
+  font-family:"Amatic SC";
+}
+h2{
+  font-size: 26px;
+  text-transform: uppercase;
+
+}
+h3{
+  padding-bottom:10px;
+}
+
+p, td, li{
+  font-family: Helvetica,'Trebuchet MS', Arial, sans-serif;
+  font-size:12px;
+  line-height: 1.3em;
+  color:#3b3e42;
+}
+small{
+  font-family: Helvetica,'Trebuchet MS', Arial, sans-serif;
+  font-size:10px;
+  line-height:0.2em;
+  color:	#938072;
+}
+.caption{
+  font-family: Helvetica,'Trebuchet MS', Arial, sans-serif;
+  font-size:11px;
+  line-height:0.2em;
+  color:	#938072;
+  float:right;
+}
+figcaption{
+  font-family: Helvetica,'Trebuchet MS', Arial, sans-serif;
+  font-size:11px;
+  line-height:0.2em;
+  color:	#938072;
+  float:right;
+}
+/*
+    LISTS
+*/
+.list-2{
+  margin-left:-25px;
+}
+.list-1{
+  margin-left:-40px;
+}
+ol li{
+    padding-bottom: 12px;
+    line-height:1.5em;
+}
+ul li{
+  line-height:1.4em;
+  padding-bottom:10px;
+  padding-top:10px;
+  border-bottom: 1px dotted black;
+  border-color:#b7b3b3;
+}
+
+/*
+    IMAGES
+*/
+img{
+  /*forces images to pay attention to parent*/
+  width: 100%;
+  display:block;
+  padding:10px 0px 10px 0px;
+  margin-bottom: 0px;
+}
+/*
+    LINKS
+*/
+a:link{
+  color:#FC831D;
+  text-decoration: none;
+  border-bottom: none;
+}
+a:visited{
+  color:#C64C25;
+}
+a:hover{
+  color:#FC831D;
+  border-bottom: 1px dotted #FC831D;
+;
+}
+a:active{
+  color:#FC831D
+;
+}
+
+/*
+    TABLES
+*/
+.table-1{
+  margin-left:-5px;
+  margin-bottom: 20px;
+  line-height:0.2em;
+
+
+}
+.table-1 td, .table-1 th{
+  font-family: Helvetica, sans-serif;
+  font-size:10px;
+  padding:5px 6px 0px 6px;
+
+
+}
+.table-1 th {
+  color:#2d2d2d;
+  text-align: left;
+}
+.table-1 td {
+  color:#3d3b3b;
+  text-align: center;
+  border-right-style:solid;
+  border-right-width: thin;
+  border-collapse: collapse;
+  border-color: #b7b3b3;
+
+}
+/*
+    BOXES
+*/
+
+
+/*
+    PAGE
+*/
